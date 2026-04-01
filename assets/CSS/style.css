@@ -3,12 +3,29 @@ body {
   background-color: #f8f1e3;
   padding: 0 1rem;
   color: #5c2d06;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  height: 15rem;
+  flex-wrap: wrap;
+}
+
+.nascosto {
+  display: none;
 }
 
 .cardMiele {
@@ -55,6 +72,7 @@ header {
   font-weight: 300;
   color: #5c2d06;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .cartBtn {
@@ -62,13 +80,18 @@ header {
   width: 60%;
 }
 
+header .btn {
+  width: 40%;
+}
+
 .shop {
   display: flex;
   align-items: center;
+  flex-grow: 1;
   justify-content: space-between;
   font-weight: bold;
   height: 4rem;
-  width: 9rem;
+  width: 100%;
   padding-right: 1rem;
 }
 
@@ -84,17 +107,30 @@ header {
   gap: 2rem;
 }
 
+.descrizione h2 {
+  margin-top: 4rem;
+  align-self: center;
+  font-weight: 900;
+  font-size: larger;
+}
+
 .descrizione h3 {
   margin: 2rem 0;
   font-weight: bold;
   font-size: large;
 }
 
+.descrizione img {
+  width: 100%;
+  object-fit: cover;
+}
 @media screen and (min-width: 480px) {
   .descrizione {
     flex-direction: row;
+    margin-top: 5rem;
   }
   .descrizione img {
     order: -1;
+    width: 100%;
   }
 }
