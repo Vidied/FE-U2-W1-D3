@@ -22,6 +22,7 @@ header {
   align-items: center;
   height: 15rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .nascosto {
@@ -80,14 +81,10 @@ header {
   width: 60%;
 }
 
-header .btn {
-  width: 40%;
-}
-
 .shop {
   display: flex;
   align-items: center;
-  flex-grow: 1;
+
   justify-content: space-between;
   font-weight: bold;
   height: 4rem;
@@ -97,6 +94,10 @@ header .btn {
 
 .shop img {
   width: 3rem;
+}
+
+header .btn:not(.shop) {
+  flex: 1 1 40%;
 }
 
 .descrizione {
